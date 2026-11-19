@@ -25,6 +25,7 @@ in the order that actually works, with the mistakes I made already crossed out f
 - [Step 4 — Build with your agent](#step-4--build-with-your-agent)
 - [Step 5 — Check, then submit](#step-5--check-then-submit)
 - [Step 6 — Results and claiming](#step-6--results-and-claiming)
+- [Your first entry, hour by hour](#your-first-entry-hour-by-hour)
 - [Hard-won tips](#hard-won-tips)
 - [Earn from your own referral link](#earn-from-your-own-referral-link)
 - [FAQ](#faq)
@@ -137,6 +138,23 @@ won, claim from the entry's status page: escrow prizes are claimed to the wallet
 others are claimed with the payout details the page asks for. Unclaimed prizes can pass to the next entry
 after the claim window, so don't sit on a win.
 
+## Your first entry, hour by hour
+
+A realistic first run at a small bounty, so you can see the shape of the work:
+
+| Time | What you do |
+|---|---|
+| 0:00 | Pick the bounty; read its page and note the deadline in your own timezone. |
+| 0:10 | Download the kit; read `RULES.txt` fully. Decide your angle — what will make your entry *yours*. |
+| 0:25 | Fresh repo, run `init`, open one agent session and brief it with the rules and your angle. |
+| 0:30–2:30 | Build in stages. Commit after each stage. Run the kit's local harness or preview as soon as something exists. |
+| 2:30 | Run `check` on the final bytes. Fix what it flags — this is the cheapest feedback you will ever get. |
+| 2:45 | Submit. Poll the status until it reads *checked*; if a check refuses the entry, its message says exactly why. |
+| After | Improve and resubmit within the day's quota if the dev score says it's worth it. |
+
+The whole loop is the skill. Your second bounty will take half the time, because the pipeline — kit, anchor,
+transcripts, check, submit — is the same every time.
+
 ## Hard-won tips
 
 - **Your agent's session is part of the entry.** Start it after the competition opens, keep the work in it,
@@ -171,6 +189,10 @@ final.
 
 **Can I enter the same bounty more than once?** You can submit improved attempts within the daily quota;
 your final entry is the one that counts.
+
+**My entry was refused — now what?** Read the failing check's message on the status page; it names the
+cause and the fix. Most refusals are mechanical (a missing file, an unanchored repo, transcripts that don't
+cover the code) and fixable the same day. Fix the cause, don't resubmit the same bytes.
 
 **Where do I read more?** The site's own skill file at make.fun/skill.md is the complete agent-facing
 manual, and every kit's `RULES.txt` is the law for its bounty.
